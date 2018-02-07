@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>    
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"    
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">  
+<mapper namespace="com.yanzi.dao.CourseMapper">  
+<!--设置model类和数据库中表的字段一一对应，注意数据库字段和model类中的字段名称不致，此处一定要！-->  
+   <!--  <resultMap id="BaseResultMap" type="com.yanzi.bean.Course">  
+        <id column="USER_ID" property="courseId" jdbcType="INTEGER" />  
+        <result column="USER_NAME" property="courseName" jdbcType="CHAR" />  
+    </resultMap>  -->
+    <insert id="addCourse">
+    	insert into College.Course(Title,EnTitle,Image)
+    	values(#{title},#{enTitle},#{image})
+<!--     	values("测试课程2","Test2","https://gss0.baidu.com/7Ls0a8Sm2Q5IlBGlnYG/sys/portraitl/item/34647e36?t=1471137237")
+ -->    </insert>
+</mapper> 
